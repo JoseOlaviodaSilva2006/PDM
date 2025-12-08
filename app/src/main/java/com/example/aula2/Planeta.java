@@ -1,5 +1,5 @@
 package com.example.aula2;
-
+//criar o planeta, fazendo a variavel nome e img ser carregada no objeto planeta ao invés de ter que carregaer uma a uma
 public class Planeta {
     private String nome;
     private int img;
