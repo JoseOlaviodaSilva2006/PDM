@@ -16,13 +16,17 @@ import androidx.core.view.WindowInsetsCompat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    //declara a variavel da lista que exibe os planetas
     ListView listViewPlanetas;
+    //delcara o controller que vai fornecer os dados
     PlanetaController pController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //ativa a tela cheia
         EdgeToEdge.enable(this);
+        //conecta o codigo java ao arquivo visual
         setContentView(R.layout.activity_main);
 
         initComponents();
@@ -30,10 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         PlanetaAdapter adapter = new PlanetaAdapter(
                 this,
+            //molde da lista proadapter
                 R.layout.item_lista,
                 pController.getPlaneta()
         );
-
+//diz pro listview usar o adapter criado
         listViewPlanetas.setAdapter(adapter);
 
     }
